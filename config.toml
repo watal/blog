@@ -1,7 +1,22 @@
 baseURL = "http://watal.github.io/"
+disablePathToLower = false
 languageCode = "ja-jp"
 title = "watal's github.io"
 theme = "hugo-octopress"
+
+# Number of blog posts in each pagination page
+paginate = 6
+
+# Highlight shortcode and code fences (```) will be treated similarly
+pygmentscodefences = true
+
+# Change highlight style here.
+# Full list: https://xyproto.github.io/splash/docs/all.html
+pygmentsStyle = "solarized-dark"
+
+# Add other Chroma options here (override them in the highlight shortcode inside markdown)
+# List of supported options: https://gohugo.io/content-management/syntax-highlighting/#options
+pygmentsoptions = "linenos=true"
 
 [permalinks]
 # Configures post URLs
@@ -9,19 +24,144 @@ post = "/blog/:year-:month-:day-:title/"
 
 [params]
 
+  # --- Start sidebar options ---
+  # Number of last posts that will be displayed in the sidebar - set to 0 or remove to hide this section
+  sidebarRecentLimit = 5
+
+  # Sidebar header - passed to markdownify so you can write markdown here
+  sidebarHeader = "About Me"
+
+  # Sidebar text also supports markdown
+  # New lines can be added with </br> or normal markdown (two spaces at the end of line or two new lines).
+  # when adding two new lines, remember to remove the indentation otherwise the new line will be treated as a codeblock
+  sidebarText = """ Name: Wataru Mishima
+  </br>
+  Birthday: 1994/11/21
+  </br>
+  E-mail: watal_i27e at gmail.com
+  """
+  # Sidebar menu - if true will add a sidebar menu between sidebar text and recent posts
+  sidebarMenuEnabled = true
+
+  # sidebar links
+  github = "https://github.com/watal/"
+  bitbucket = ""
+  twitter = "https://twitter.com/watal_i27e/"
+  keybase = ""
+  stackoverflow = ""
+  linkedin = ""
+  googleplus = ""
+  youtube = ""
+  facebook = ""
+  instagram = ""
+
+  # --- End sidebar options ---
+
+  # If set to true, navigation menu links will open in a new window with the exception of links to root ("/")
+  # If this item does not exist or set to false, then navigation menu links will open in the same window
+  navigationNewWindow = true
+
   # If false, all contents of posts will appear on the front page and in pagination
   truncate = true
 
   # Author's name (appears in meta tags and under posts)
   author = "watal"
 
-  # Highlight shortcode and code fences (```) will be treated similarly
-  pygmentscodefences = true
+ # This text appears in the site header under website title
+  subtitle = "研究成果と備忘録"
 
-  # Change highlight style here.
-  # Full list: https://xyproto.github.io/splash/docs/all.html
-  pygmentsStyle = "solarized-dark"
+  # Search engine URL
+  searchEngineURL = "https://www.google.com/search"
 
-  # Add other Chroma options here (override them in the highlight shortcode inside markdown)
-  # List of supported options: https://gohugo.io/content-management/syntax-highlighting/#options
-  pygmentsoptions = "linenos=true"
+  # Text of the "Continue Reading" label. Supports markdown and inline HTML.
+  # For example, &rarr; == right arrow.
+  continueReadingText = "Would you like to know more? &rarr;"
+
+  # Google analytics code - remove if you do not have/want Google Analytics - needs JavaScript
+  # googleAnalytics = "UA-XXXXX-X"
+
+  # Optional piwik tracking
+  #[params.analytics.piwik]
+  #  URL = "https://stats.example.com"
+  #  ID = "42"
+
+  # Switch to true to enable RSS icon link
+  rss = true
+
+  # Set to true to use a text label for RSS instead of an icon
+  # This is overwritten by the "rss" setting
+  textrss = false
+
+  # Website's default description
+  defaultDescription = ""
+
+  # Populate this with your own search keywords - these will appear in the meta tags
+  # defaultKeywords = ["keyword1" , "keyword2" , "keyword3" , "keyword4"]
+
+  # CSS override files
+  # Paths should be relative to the `static` directory
+  # customCSS = ["css/custom.css","css/custom2.css"]
+
+  # 404.html header and text - both support markdown
+  notFoundHeader = "There's nothing here"
+
+  notFoundText = """Please either go back or use the navigation/sidebar menus.
+  """
+
+  # Set to true to hide ReadingTime on posts
+  disableReadingTime = false
+
+  # Set to true to disable downloading of remote Google fonts
+  disableGoogleFonts = false
+
+  # Remove or Set to false to use local fonts
+  # remoteFonts = false
+
+  # Remove or set to false to use FontAwesome CDN, otherwise the theme uses ForkAwesome local fonts.
+  # fontAwesome = false
+
+  # Generate taxonomy pages
+  generateTaxonomyList = true
+
+  # This is not needed unless alphabetical sort is needed
+  # sortTaxonomyAlphabetical = true
+
+  # Twitter card config
+  # Enable with this.
+  # twitterCardEnabled = true
+  # Don't include the @.
+  # twitterCardSite =
+  # twitterCardDomain = "parsiya.net"
+  # Don't include the @.
+  # twitterCardAuthor = "CryptoGangsta"
+
+# Menu
+# If navigationNewWindow (under [params]) is set to true then all links except root ("/") will open in a new window
+# If it does not exist or is set to false then links will open in the same window
+[[menu.main]]
+  Name = "Blog"
+  URL = "/"
+  weight = -5
+
+[[menu.main]]
+  Name = "Shinoda Lab.,"
+  URL = "https://shinoda-www.jaist.ac.jp/"
+  weight = -5
+
+[[menu.main]]
+  Name = "Github"
+  URL = "https://www.github.com/watal"
+
+
+# Sidebar menus
+# Enable with "sidebarMenuEnabled = true" under [params]
+# Header text is "sidebarMenuHeader" under [params]
+[[menu.sidebar]]
+  Name = "Homepage"
+  URL = "/"
+  weight = 0
+
+# Blackfriday is Hugo's markdown engine. Options are at: https://gohugo.io/overview/configuration/#configure-blackfriday-rendering
+[blackfriday]
+  hrefTargetBlank = true # open the external links in a new window
+  fractions = false
