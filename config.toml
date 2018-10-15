@@ -1,0 +1,27 @@
+baseURL = "http://watal.github.io/"
+languageCode = "ja-jp"
+title = "watal's github.io"
+theme = "hugo-octopress"
+
+[permalinks]
+# Configures post URLs
+post = "/blog/:year-:month-:day-:title/"
+
+[params]
+
+  # If false, all contents of posts will appear on the front page and in pagination
+  truncate = true
+
+  # Author's name (appears in meta tags and under posts)
+  author = "watal"
+
+  # Highlight shortcode and code fences (```) will be treated similarly
+  pygmentscodefences = true
+
+  # Change highlight style here.
+  # Full list: https://xyproto.github.io/splash/docs/all.html
+  pygmentsStyle = "solarized-dark"
+
+  # Add other Chroma options here (override them in the highlight shortcode inside markdown)
+  # List of supported options: https://gohugo.io/content-management/syntax-highlighting/#options
+  pygmentsoptions = "linenos=true"
