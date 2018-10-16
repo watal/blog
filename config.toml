@@ -3,7 +3,6 @@ disablePathToLower = false
 languageCode = "ja-jp"
 title = "watal's github.io"
 theme = "hugo-octopress"
-
 # Number of blog posts in each pagination page
 paginate = 6
 
@@ -20,7 +19,7 @@ pygmentsoptions = "linenos=true"
 
 [permalinks]
 # Configures post URLs
-post = "/blog/:year-:month-:day-:title/"
+post = "/blog/:year/:month/:filename/"
 
 [params]
 
@@ -30,6 +29,8 @@ post = "/blog/:year-:month-:day-:title/"
 
   # Sidebar header - passed to markdownify so you can write markdown here
   sidebarHeader = "About Me"
+
+  sidebarMenuHeader = "Category"
 
   # Sidebar text also supports markdown
   # New lines can be added with </br> or normal markdown (two spaces at the end of line or two new lines).
@@ -62,7 +63,7 @@ post = "/blog/:year-:month-:day-:title/"
   navigationNewWindow = true
 
   # If false, all contents of posts will appear on the front page and in pagination
-  truncate = true
+  truncate = false
 
   # Author's name (appears in meta tags and under posts)
   author = "watal"
@@ -75,7 +76,7 @@ post = "/blog/:year-:month-:day-:title/"
 
   # Text of the "Continue Reading" label. Supports markdown and inline HTML.
   # For example, &rarr; == right arrow.
-  continueReadingText = "Would you like to know more? &rarr;"
+  continueReadingText = "Read More &rarr;"
 
   # Google analytics code - remove if you do not have/want Google Analytics - needs JavaScript
   # googleAnalytics = "UA-XXXXX-X"
@@ -105,7 +106,7 @@ post = "/blog/:year-:month-:day-:title/"
   # 404.html header and text - both support markdown
   notFoundHeader = "There's nothing here"
 
-  notFoundText = """Please either go back or use the navigation/sidebar menus.
+  notFoundText = """[Go Home](/ "Home")
   """
 
   # Set to true to hide ReadingTime on posts
@@ -144,24 +145,44 @@ post = "/blog/:year-:month-:day-:title/"
   weight = -5
 
 [[menu.main]]
-  Name = "Shinoda Lab.,"
-  URL = "https://shinoda-www.jaist.ac.jp/"
-  weight = -5
+  Name = "About Me"
+  URL = "/about/"
+  weight = -4
 
 [[menu.main]]
   Name = "Github"
   URL = "https://www.github.com/watal"
+  weight = -3
 
+[[menu.main]]
+  Name = "Twitter"
+  URL = "https://twitter.com/watal_i27e/"
+  weight = -3
+
+[[menu.main]]
+  Name = "Qiita"
+  URL = "https://qiita.com/watal"
+  weight = -3
+
+[[menu.main]]
+  Name = "Shinoda Lab."
+  URL = "https://shinoda-www.jaist.ac.jp/"
+  weight = -2
 
 # Sidebar menus
 # Enable with "sidebarMenuEnabled = true" under [params]
 # Header text is "sidebarMenuHeader" under [params]
 [[menu.sidebar]]
-  Name = "Homepage"
-  URL = "/"
+  Name = "研究"
+  URL = "/categories/研究"
+  weight = -1
+
+[[menu.sidebar]]
+  Name = "技術メモ"
+  URL = "/categories/技術メモ"
   weight = 0
 
 # Blackfriday is Hugo's markdown engine. Options are at: https://gohugo.io/overview/configuration/#configure-blackfriday-rendering
 [blackfriday]
-  hrefTargetBlank = true # open the external links in a new window
+  hrefTargetBlank = false # open the external links in a new window
   fractions = false
