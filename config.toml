@@ -39,7 +39,7 @@ post = "/blog/:year/:month/:filename/"
   </br>
   Birthday: 1994/11/21
   </br>
-  E-mail: watal_i27e at gmail.com
+  E-mail: watal.i27e at gmail.com
   """
   # Sidebar menu - if true will add a sidebar menu between sidebar text and recent posts
   sidebarMenuEnabled = true
