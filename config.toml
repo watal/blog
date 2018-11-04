@@ -1,4 +1,4 @@
-baseURL = "http://watal.github.io/"
+baseURL = "https://watal.github.io/"
 disablePathToLower = false
 languageCode = "ja-jp"
 title = "watal's github.io"
