@@ -50,7 +50,7 @@ post = "/blog/:year/:month/:filename/"
   twitter = "https://twitter.com/watal_i27e/"
   keybase = ""
   stackoverflow = ""
-  linkedin = ""
+  linkedin = "https://www.linkedin.com/in/watarumishima"
   googleplus = ""
   youtube = ""
   facebook = ""
@@ -152,6 +152,11 @@ post = "/blog/:year/:month/:filename/"
 [[menu.main]]
   Name = "Github"
   URL = "https://www.github.com/watal"
+  weight = -3
+
+[[menu.main]]
+  Name = "sourcerer.io"
+  URL = "https://sourcerer.io/watal"
   weight = -3
 
 [[menu.main]]
